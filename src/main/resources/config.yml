@@ -1,0 +1,27 @@
+database:
+  type: "sqlite" # or "mysql"
+  file: "order.db"
+  host: "localhost"
+  port: 3306
+  database: "minecraft"
+  username: "root"
+  password: "password"
+
+# Global market settings
+market:
+  # Transaction fee rate (0.03 = 3%)
+  # Deducted from the seller's earnings upon a successful sale.
+  transaction-fee: 0.03
+  
+  # Cancellation fee rate (0.0 = 0%)
+  # Deducted from the player's balance when they cancel a listing.
+  # Based on the remaining value of the listing (price * remaining_amount).
+  # If the player cannot afford the fee, cancellation is blocked.
+  cancellation-fee: 0.0
+
+  # Banned items (Material names)
+  # Players cannot list these items.
+  banned-items:
+    - "BARRIER"
+    - "BEDROCK"
+    - "COMMAND_BLOCK"

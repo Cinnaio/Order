@@ -1,0 +1,15 @@
+name: Order
+version: '${version}'
+main: com.github.cinnaio.order.Order
+api-version: 1.21
+folia-supported: true
+authors: [Cinnaio]
+commands:
+  market:
+    description: Market main command
+    usage: /market [sell|reload]
+    aliases: [bz, bazaar]
+permissions:
+  order.reload:
+    description: Allows reloading the plugin configuration and database
+    default: op
